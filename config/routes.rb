@@ -1,10 +1,4 @@
 Rails.application.routes.draw do
-  get 'lists/new'
-  post 'lists' => 'lists#create'
-  get 'lists/index'
-  get 'lists/show'
-  get 'lists/edit'
-  get 'top' => 'homes#top'
-  get 'books' => 'lists#new'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root to: 'homes#top'
+  resources :books
 end
